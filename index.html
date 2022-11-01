@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Marker based AR Portfolio</title>
+
+  <!-- Import A-Frame and then AR.js -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <!-- A-frame scene -->
+  <a-scene embedded arjs="trackingMethod : best; sourceType:webcam; debugUIEnabled : false" vr-mode-ui="enabled:false">
+    <!-- Asset Management -->
+
+    <a-assets>
+      <img id="flight-simulator-card"  src="/VR-AR-ProjectCards/2.png">
+      <img id="virtual-tour-card"  src="/VR-AR-ProjectCards/3.png" >
+      <img id= "shooting-game-card" src= "/VR-AR-ProjectCards/4.png">
+      <img id= "AR-navigation-card" src = "/VR-AR-ProjectCards/5.png">
+      <img id= "AR-menu-card" src = "/VR-AR-ProjectCards/6.png">
+    </a-assets>
+
+    <!--flight simulation-->
+    <a-marker type="pattern" ; url="Pattern Markers/pattern-icon-01.patt">
+      <a-plane src = "#flight-simulator-card" position = "0 0 -1" width = "2" height = "2" rotation = "0 0 0"> </a-plane>
+    </a-marker>
+    <a-marker type="pattern" ; url="Pattern Markers/pattern-icon-02.patt">
+      <a-plane src = "#AR-menu-card" position = "0 0 -1" width = "2" height = "2" rotation = "0 0 0"> </a-plane>
+    </a-marker>
+    <a-marker type="pattern" ; url="Pattern Markers/pattern-icon-03.patt">
+      <a-plane src = "#AR-navigation-card" position = "0 0 -1" width = "2" height = "2" rotation = "0 0 0"> </a-plane>
+    </a-marker>
+    <a-marker type="pattern" ; url="Pattern Markers/pattern-icon-04.patt">
+      <a-plane src = "#virtual-tour-card" position = "0 0 -1" width = "2" height = "2" rotation = "0 0 0"> </a-plane>
+    </a-marker>
+    <a-marker type="pattern" ; url="Pattern Markers/pattern-icon-06.patt">
+      <a-plane src = "#shooting-game-card" position = "0 0 -1" width = "2" height = "2" rotation = "0 0 0"> </a-plane>
+    </a-marker>
+  </a-scene>
+
+
+</body>
+
+</html>
